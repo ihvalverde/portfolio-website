@@ -57,6 +57,9 @@ portfolio-website/
 │   └── img/                # Fotografías del perfil y capturas de proyectos (.jpeg, .png, .jpg)
 ├── index.html              # Estructura principal y maquetación general
 └── README.md               # Documentación del portafolio
+```
+
+---
 
 ## 🎨 Paleta de Colores y Estilos
 
