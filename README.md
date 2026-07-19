@@ -57,3 +57,37 @@ portfolio-website/
 │   └── img/                # Fotografías del perfil y capturas de proyectos (.jpeg, .png, .jpg)
 ├── index.html              # Estructura principal y maquetación general
 └── README.md               # Documentación del portafolio
+
+## 🎨 Paleta de Colores y Estilos
+
+El diseño visual está centralizado en la raíz del documento (`:root`) mediante propiedades nativas de CSS para mantener la consistencia estética en toda la aplicación:
+
+*   **Rosa Pastel Principal (`--primary-pink: #f6c4df`):** Utilizado en componentes clave, bordes, cajas de habilidades y botones secundarios.
+*   **Rosa de Enfoque (`--secondary-pink: #e8a7c9`):** Aplicado a estados *hover*, títulos interactivos, iconos de certificación y enlaces web.
+*   **Fondo Suave (`--light-bg: #fdfbfd`):** Genera un contraste limpio, suave y descansado para la lectura prolongada.
+*   **Tipografía:** Integración fluida de **Poppins** (pesos 300, 400, 600) importada directamente de Google Fonts.
+
+---
+
+## ⚙️ Visualización e Instalación Local
+
+Si deseas clonar este repositorio para examinar el código base de manera local en tu entorno de desarrollo:
+
+1. **Clona el proyecto:**
+   ```bash
+   git clone https://github.com/ihvalverde/portfolio-website.git
+   ```
+2. **Navega al directorio:**
+   ```bash
+   cd portfolio-website
+   ```
+3. **Ejecuta la interfaz:**
+   Abre el archivo `index.html` directamente en tu navegador predeterminado o utiliza la extensión *Live Server* en Visual Studio Code para actualizaciones en tiempo real.
+
+---
+
+## 📬 Conexión Profesional
+
+*   **GitHub Oficial:** [@ihvalverde](https://github.com/ihvalverde)
+*   **LinkedIn:** [Iara Hatsumy Valverde Briceño](https://www.linkedin.com/in/iara-hatsumy-valverde-brice%C3%B1o-bb5b2927a/)
+*   **Despliegue automático:** Integrado con ❤️ en [Vercel](https://vercel.com)
