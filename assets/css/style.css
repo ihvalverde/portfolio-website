@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    /* Paleta de Colores */
+    --primary-pink: #f6c4df;    /* Rosa Pastel Principal */
+    --secondary-pink: #e8a7c9;  /* Rosa para Hover */
+    --dark-text: #2d3436;      /* Gris muy oscuro para lectura */
+    --light-bg: #fdfbfd;       /* Blanco con un toque rosado */
+    --card-bg: #ffffff;        /* Blanco puro para tarjetas */
+    --accent-soft: #fcf4f8;    /* Fondo muy tenue */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 80px;
+    gap: 40px;
+    background: linear-gradient(135deg, #fff5f9 0%, #ffffff 100%);
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    color: var(--dark-text);
+    line-height: 1.1;
+}
+
+.hero-text span {
+    color: var(--secondary-pink);
+}
+
+.hero-text p {
+    margin: 20px 0;
+    color: #636e72;
+}
+
+/* IMAGEN HERO */
+.hero-img img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+}
+
+/* BOTONES */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    background: var(--primary-pink);
+    color: #4a4a4a;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(246, 196, 223, 0.4);
+}
+
+.btn:hover {
+    background: var(--secondary-pink);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(246, 196, 223, 0.6);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-pink);
+    color: var(--secondary-pink);
+    box-shadow: none;
+}
+
+.btn-outline:hover {
+    background: var(--accent-soft);
+    color: var(--secondary-pink);
+}
+
+/* Etiquetas de tecnología dentro de la card */
+.tech-tags {
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tech-tags span {
+    background: var(--accent-soft);
+    color: var(--secondary-pink);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid var(--primary-pink);
+}
+
+/* Contenedor de botones para que queden alineados */
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: auto; /* Empuja los botones al fondo de la card */
+}
+
+.card-buttons .btn {
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+/* SECCIONES */
+section {
+    width: 85%;
+    margin: 80px auto;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--primary-pink);
+    padding-left: 15px;
+}
+
+/* PROYECTOS (Ajuste de ancho y cuadrícula) */
+.projects {
+    display: grid;
+    /* Cada cuadro medirá entre 280px y 350px. Si hay espacio, se ponen al lado */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 20px;
+    transition: 0.4s;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Lo hace cuadrado para que se vea ordenado */
+    object-fit: contain; /* Muestra la imagen completa sin cortes */
+    background-color: var(--light-bg);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-pink);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* SECCIÓN CERTIFICADOS */
+.cert-grid {
+    display: grid;
+    /* Ajustado para que quepan 2 o 3 por fila dependiendo de la pantalla */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.cert-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+}
+
+.cert-card:hover {
+    border-color: var(--primary-pink);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(246, 196, 223, 0.2);
+}
+
+.cert-card i {
+    font-size: 28px;
+    color: var(--secondary-pink);
+    min-width: 40px;
+    text-align: center;
+}
+
+.cert-card h3 {
+    font-size: 16px;
+    color: var(--dark-text);
+    margin-bottom: 2px;
+}
+
+.cert-card p {
+    font-size: 13px;
+    color: #636e72;
+    margin-bottom: 8px;
+}
+
+.cert-link {
+    text-decoration: none;
+    color: var(--secondary-pink);
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cert-link:hover {
+    text-decoration: underline;
+}
+
+/* Ajuste móvil */
+@media (max-width: 768px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* SKILLS */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.skills div {
+    background: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1.5px solid #f6c4df;
+    color: #2d3436;
+    font-weight: 500;
+}
+
+/* CONTACTO */
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.social-links-bottom {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-links-bottom a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.social-links-bottom a i {
+    font-size: 20px;
+    color: var(--secondary-pink);
+}
+
+.social-links-bottom a:hover {
+    color: var(--secondary-pink);
+    transform: translateY(-2px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-family: inherit;
+}
+
+/* FOOTER (Centrado) */
+footer {
+    background: var(--accent-soft);
+    padding: 40px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+/* --- RESPONSIVE CORREGIDO PARA CELULAR --- */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+    .hero-img img {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .about,
+    .contact {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-links-bottom {
+        justify-content: center;
+    }
+
+    section {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .projects {
+        /* En celular forzamos una sola columna para que se vea bien */
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: auto; /* Permite que el aspecto cuadrado mande */
+    }
+}
